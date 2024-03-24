@@ -1,10 +1,9 @@
-import { useState } from 'react'
 
 function App() {
 
   return (
     <>
-      React Practice
+      <h1>React Practice</h1>
     </>
   )
 }
