@@ -4,8 +4,9 @@
   font-weight: 400;
 }
 body {
-  margin: 0;
+  margin: 0 5px;
   font-family: Inter;
   display: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   place-items: center;
+
 }
