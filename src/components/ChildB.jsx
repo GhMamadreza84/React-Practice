@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const ChildB = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-}
+const ChildB = ({ number }) => {
+  return (
+    <div style={{ border: "2px solid black", padding: "10px", margin: "20px" }}>
+      <h3>Child B</h3>
+      <p>{number}</p>
+    </div>
+  );
+};
 
 export default ChildB;

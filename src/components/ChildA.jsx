@@ -1,12 +1,10 @@
 import {useState} from "react";
 
-const ChildA = () => {
-  const [number, setNumber] = useState(0);
+const ChildA = ({number}) => {
   return (
-    <div>
+    <div style={{ border: "2px solid black", padding: "10px", margin: "20px" }}>
       <h3>Child A</h3>
       <p>{number}</p>
-      <button onClick={() => setNumber((number) => number + 1)}>+</button>
     </div>
   );
 };
