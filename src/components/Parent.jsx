@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ChildA from "./ChildA";
 import ChildB from "./ChildB";
-
+import Button from "./Button";
 const Parent = () => {
   const [number, setNumber] = useState(0);
   const clickHandler = () => {
@@ -18,7 +18,3 @@ const Parent = () => {
 };
 
 export default Parent;
-
-function Button({clickHandler}) {
-  return <button onClick={clickHandler}>+</button>;
-}
