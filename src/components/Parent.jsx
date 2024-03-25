@@ -12,12 +12,13 @@ const Parent = () => {
       <h3>Parent</h3>
       <button onClick={() => setNumber((number) => number + 1)}>+</button>
       <ChildA number={number} setNumber={setNumber} />
-      <ChildB
-        number={number}
-        text={<button onClick={clickHandler}>+</button>}
-      />
+      <ChildB number={number} button={<Button clickHandler={clickHandler} />} />
     </div>
   );
 };
 
 export default Parent;
+
+function Button({clickHandler}) {
+  return <button onClick={clickHandler}>+</button>;
+}
