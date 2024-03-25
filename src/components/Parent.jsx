@@ -9,7 +9,7 @@ const Parent = () => {
       <h3>Parent</h3>
       <button onClick={() => setNumber((number) => number + 1)}>+</button>
       <ChildA number={number} setNumber={setNumber}/>
-      <ChildB number={number} />
+      <ChildB number={number} text={<button onClick={clickHandler}>+</button>} />
     </div>
   );
 };
