@@ -9,7 +9,6 @@ const Parent = () => {
     setNumber((number) => number + 1);
   };
   return (
-    <div>
       <StyledDiv>
         <h3>Parent</h3>
         <button onClick={() => setNumber((number) => number + 1)}>+</button>
@@ -19,7 +18,6 @@ const Parent = () => {
           button={<Button clickHandler={clickHandler} />}
         />
       </StyledDiv>
-    </div>
   );
 };
 
