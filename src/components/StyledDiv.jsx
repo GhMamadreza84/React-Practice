@@ -1,6 +1,6 @@
 
 const StyledDiv = () => {
-    const styles = ""
+    const styles = {border: "2px solid black", padding: "10px", margin: "20px"}
     return (
         <div>
             
