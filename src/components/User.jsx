@@ -10,7 +10,7 @@ const User = () => {
     <div>
       <p>User</p>
       {users.map((user) => (
-        <li>{user.name}</li>
+        <li key={user.id}>{user.name}</li>
       ))}
     </div>
   );
