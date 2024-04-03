@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 const User = () => {
-  return (
     useEffect(()=>{
-        console.log("mounted");
+        console.log("mounted")
     },[])
+  return (
     <div>
       <p>User</p>
 
