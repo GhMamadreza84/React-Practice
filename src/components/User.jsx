@@ -1,6 +1,6 @@
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 const User = () => {
-    const [users,setUsers]=useState([])
+  const [users, setUsers] = useState([]);
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
@@ -9,6 +9,9 @@ const User = () => {
   return (
     <div>
       <p>User</p>
+      {users.map((user) => (
+        <li>{user.name}</li>
+      ))}
     </div>
   );
 };
