@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 const User = () => {
     useEffect(()=>{
-        console.log("mounted")
+        setTimeout(console.log("mounted"),3000)
     },[])
   return (
     <div>
