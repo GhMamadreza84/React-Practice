@@ -2,7 +2,9 @@
 const User = () => {
     return (
         <div>
-            User
+            <p>User</p>
+            // Life Cycle
+            // 1 - Mounting 2 - Updating 3 - UnMounting
         </div>
     );
 }
