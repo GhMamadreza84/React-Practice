@@ -9,9 +9,11 @@ const User = () => {
   return (
     <div>
       <p>User</p>
-      {users.map((user) => (
-        <li key={user.id}>{user.name}</li>
-      ))}
+      <ul>
+        {users.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
     </div>
   );
 };
