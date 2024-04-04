@@ -6,7 +6,7 @@ const User = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        const res = await fetch("https://jsonplaceholder.typicode.com/users/");
         const data = await res.json();
         setUsers(data);
       } catch (error) {
@@ -15,9 +15,11 @@ const User = () => {
     };
     fetchUsers();
   }, []);
-  const searchHandler = async()=>{
-    const res = fetch(``)
-  }
+  const searchHandler = async () => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const json = await res.json();
+    console.log(json);
+  };
   return (
     <div>
       <input
