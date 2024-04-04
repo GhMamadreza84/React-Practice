@@ -9,7 +9,7 @@ const User = () => {
         const data = await res.json();
         setUsers(data);
       } catch (error) {
-        console.log(error);
+        setError(true);
       }
     };
     fetchUsers();
@@ -17,12 +17,13 @@ const User = () => {
   return (
     <div>
       <p>User</p>
-      {!users.length && <h3>Loading</h3>}
+      {!users.length && !error && <h3>Loading</h3>}
       <ul>
         {users.map((user) => (
           <li key={user.id}>{user.name}</li>
         ))}
       </ul>
+      {error && <h3>Something Wrong</h3>}
     </div>
   );
 };
