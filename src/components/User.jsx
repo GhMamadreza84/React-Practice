@@ -5,7 +5,7 @@ const User = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("hsttps://jsonplaceholder.typicode.com/users");
+        const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
         const data = await res.json();
         setUsers(data);
       } catch (error) {
