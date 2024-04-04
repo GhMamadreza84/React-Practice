@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 const User = () => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(false);
+  const [id, setId] = useState("");
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
         const data = await res.json();
         setUsers(data);
       } catch (error) {
@@ -14,8 +15,18 @@ const User = () => {
     };
     fetchUsers();
   }, []);
+  const searchHandler = async()=>{
+    const res = fetch(``)
+  }
   return (
     <div>
+      <input
+        type="number"
+        value={id}
+        placeholder="enter id"
+        onChange={(e) => setId(e.target.value)}
+      />
+      <button onClick={searchHandler}>search</button>
       <p>User</p>
       {!users.length && !error && <h3>Loading</h3>}
       <ul>
