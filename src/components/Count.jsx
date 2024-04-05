@@ -1,11 +1,13 @@
-import {useState,useEffect} from 'react';
+import { useState, useEffect } from "react";
 
 const Count = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-}
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(count + 1);
+    }, 1000);
+  }, []);
+  return <div></div>;
+};
 
 export default Count;
