@@ -7,7 +7,9 @@ const Count = () => {
       setCount(count + 1);
     }, 1000);
   }, []);
-  return <div></div>;
+  return <div>
+    {count}
+  </div>;
 };
 
 export default Count;
