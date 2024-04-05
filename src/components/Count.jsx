@@ -6,7 +6,7 @@ const Count = () => {
     const interval = setInterval(() => {
       setCount(count + 1);
     }, 1000);
-  }, []);
+  }, [count]);
   return <div>
     {count}
   </div>;
