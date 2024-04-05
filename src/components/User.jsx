@@ -29,7 +29,7 @@ const User = () => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
     const json = await res.json();
     console.log(json);
-  // };
+  };
   return (
     <div>
       <input
@@ -42,9 +42,9 @@ const User = () => {
       <p>User</p>
       {!users.length && !error && <h3>Loading</h3>}
       <ul>
-        {/* {users.map((user) => (
+        {users.map((user) => (
           <li key={user.id}>{user.name}</li>
-        ))} */}
+        ))}
       </ul>
       {error && <h3>Something Wrong</h3>}
     </div>
