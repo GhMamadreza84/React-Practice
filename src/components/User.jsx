@@ -8,7 +8,7 @@ const User = () => {
     const fetchUsers = async () => {
       try {
         const res = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${id}`,
+          `https://jsonplaceholder.typicode.com/photos/${id}`,
           { signal: controller.signal }
         );
         const data = await res.json();
@@ -40,9 +40,9 @@ const User = () => {
       <p>User</p>
       {!users.length && !error && <h3>Loading</h3>}
       <ul>
-        {users.map((user) => (
+        {/* {users.map((user) => (
           <li key={user.id}>{user.name}</li>
-        ))}
+        ))} */}
       </ul>
       {error && <h3>Something Wrong</h3>}
     </div>
