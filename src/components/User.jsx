@@ -14,7 +14,9 @@ const User = () => {
         const data = await res.json();
         setUsers(data);
       } catch (error) {
-        setError(true);
+        if (error.message !== "AbortError") {
+          setError(true);
+        }
       }
     };
     fetchUsers();
