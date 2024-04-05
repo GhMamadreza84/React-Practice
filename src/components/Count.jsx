@@ -6,6 +6,10 @@ const Count = () => {
     const interval = setInterval(() => {
       setCount(count =>count+ 1);
     }, 1000);
+    return ()=>{
+        console.log("cleanup");
+        clearInterval(interval)
+    }
   }, [count]);
   return <div>
     {count}
