@@ -7,7 +7,10 @@ const User = () => {
     const controller = new AbortController();
     const fetchUsers = async () => {
       try {
-        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`,{signal:controller.signal})
+        const res = await fetch(
+          `https://jsonplaceholder.typicode.com/users/${id}`,
+          { signal: controller.signal }
+        );
         const data = await res.json();
         setUsers(data);
       } catch (error) {
@@ -15,7 +18,10 @@ const User = () => {
       }
     };
     fetchUsers();
-  
+    return () => {
+      controller.abort();
+      console.log("cleanup");
+    };
   }, [id]);
   // const searchHandler = async () => {
   //   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
