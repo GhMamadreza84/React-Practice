@@ -15,7 +15,8 @@ const User = () => {
       }
     };
     fetchUsers();
-  }, []);
+  
+  }, [id]);
   // const searchHandler = async () => {
   //   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
   //   const json = await res.json();
