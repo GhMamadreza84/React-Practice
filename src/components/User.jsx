@@ -25,10 +25,10 @@ const User = () => {
       console.log("cleanup");
     };
   }, [id]);
-  // const searchHandler = async () => {
-  //   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
-  //   const json = await res.json();
-  //   console.log(json);
+  const searchHandler = async () => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const json = await res.json();
+    console.log(json);
   // };
   return (
     <div>
@@ -38,7 +38,7 @@ const User = () => {
         placeholder="enter id"
         onChange={(e) => setId(e.target.value)}
       />
-      {/* <button onClick={searchHandler}>search</button> */}
+       <button onClick={searchHandler}>search</button> 
       <p>User</p>
       {!users.length && !error && <h3>Loading</h3>}
       <ul>
