@@ -1,6 +1,6 @@
-import Count from "./components/Count";
+import { useEffect } from "react";
+
 import Photos from "./components/Photos";
-import User from "./components/User";
 
 function App() {
   return (
