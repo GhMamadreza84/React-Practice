@@ -1,12 +1,11 @@
 import { useState } from "react";
 
 const Photos = () => {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(true);
   return (
     <div>
-      <h1>Botostart</h1>
-      <h3>React course</h3>
-      <button>toggle</button>
+      {isShow ? <h1>Botostart</h1> : <h1>React course</h1>}
+      <button onClick={() => setIsShow((isShow) => !isShow)}>toggle</button>
     </div>
   );
 };
