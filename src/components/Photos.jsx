@@ -1,6 +1,7 @@
-import {useState} from "react";
+import { useState } from "react";
 
 const Photos = () => {
+  const [isShow, setIsShow] = useState(false);
   return (
     <div>
       <h1>Botostart</h1>
